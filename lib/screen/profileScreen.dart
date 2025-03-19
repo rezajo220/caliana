@@ -16,25 +16,8 @@ class ProfileScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.light_mode_outlined,
-                        color: Colors.blue,
-                        size: 40,
-                      ),
-                      const SizedBox(width: 2),
-                      Container(
-                        width: 8,
-                        height: 8,
-                        decoration: BoxDecoration(
-                          color: Colors.pink[300],
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    ],
-                  ),
-
+                  Image.asset('assets/logo.webp', width: 40, height: 40),
+                  const SizedBox(width: 4),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -70,7 +53,7 @@ class ProfileScreen extends StatelessWidget {
                       backgroundColor: Colors.blue[50],
                       child: const CircleAvatar(
                         radius: 57,
-                        backgroundImage: AssetImage('assets/avatar.png'),
+                        backgroundImage: AssetImage('assets/person.jpg'),
                       ),
                     ),
                   ),

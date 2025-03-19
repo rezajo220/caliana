@@ -90,31 +90,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.light_mode_outlined,
-                        color: Colors.blue[400],
-                        size: 40,
-                      ),
-                      const SizedBox(width: 4),
-                      Container(
-                        width: 8,
-                        height: 8,
-                        decoration: BoxDecoration(
-                          color: Colors.pink[300],
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    ],
-                  ),
-
+                  Image.asset('assets/logo.webp', width: 40, height: 40),
+                  const SizedBox(width: 4),
                   Row(
                     children: [
                       Container(
                         padding: const EdgeInsets.only(
                           left: 10,
-                          right: 20,
+                          right: 10,
                           top: 5,
                           bottom: 5,
                         ),
@@ -134,9 +117,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           ),
                         ),
                       ),
-                      const CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        child: Icon(Icons.person, color: Colors.white),
+                      CircleAvatar(
+                        radius: 25,
+                        backgroundColor: Colors.blue[50],
+                        child: const CircleAvatar(
+                          radius: 57,
+                          backgroundImage: AssetImage('assets/person.jpg'),
+                        ),
                       ),
                       const SizedBox(width: 10),
                       GestureDetector(
@@ -153,10 +140,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          padding: const EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(10),
                           child: const Icon(
                             Icons.notifications_none,
-                            size: 28,
+                            size: 30,
                             color: Colors.grey,
                           ),
                         ),
